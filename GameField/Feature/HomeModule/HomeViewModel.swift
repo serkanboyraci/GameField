@@ -13,12 +13,35 @@ protocol HomeViewModelDelegate {
     func viewDidLoad()
     func numberOfItemsInSection() -> Int
     func cellForItemAt(at indexPath: IndexPath) -> Game?
+    func updateSearchResults(text: String?)
 }
 
 class HomeViewModel: HomeViewModelDelegate {
+    func viewDidLoad() {
+        <#code#>
+    }
+    
+    func numberOfItemsInSection() -> Int {
+        <#code#>
+    }
+    
+    func cellForItemAt(at indexPath: IndexPath) -> Game? {
+        <#code#>
+    }
+    
+    func updateSearchResults(text: String?) {
+        <#code#>
+    }
+    
     weak var view: HomeViewControllerDelegate?
     
-    var gameList = [Game]() {
+    private var gameList = [Game]() {
+        private var mainGameList = [Game](){
+            didSet{
+                filteredGameList = mainGameList
+            }
+        }
+        private var filteredGameList = [Game](){
         didSet{
             view?.collectionViewReloadData()
         }
@@ -26,25 +49,35 @@ class HomeViewModel: HomeViewModelDelegate {
     
     func viewDidLoad() {
         view?.prepareCollectionView()
+        view?.prepareSearchController()
         getAllGames()
     
     }
     func numberOfItemsInSection() -> Int {
-        gameList.count
+        filteredGameList.count
     }
     
     func cellForItemAt(at indexPath: IndexPath) -> Game? {
-        gameList[indexPath.row]
+        filteredGameList[indexPath.row]
+    }
+        
+        func updateSearchResults(text: String?) {
+            if text.isNilOrEmpty {
+                filteredGameList = mainGameList
+                
+            } else {
+                filteredGameList = mainGameList.filter({ $0.name.uppercased().contains(text!.uppercased())})
+            }
     }
     
     
     //MARK: - Private Methods
-    private func getAllGames(){
+    func getAllGames(){
         NetworkManager.shared.getAllGames(queryItems: []) {[weak self] result in
             guard let self else { return }
             switch result {
             case .success(let games):
-                self.gameList = games
+                self.mainGameList = games
             case .failure(let error):
                 print(error)
             }

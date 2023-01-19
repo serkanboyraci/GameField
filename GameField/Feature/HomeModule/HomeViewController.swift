@@ -70,3 +70,11 @@ extension HomeViewController: HomeViewControllerDelegate {
     }
 }
 
+//MARK: - UISearchResultsUpdating
+extension HomeViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let text = searchController.searchBar.text
+        viewModel.updateSearchResults(text: text)
+    }
+}
+
