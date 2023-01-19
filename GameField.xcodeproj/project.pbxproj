@@ -127,11 +127,11 @@
 		60A6C4AE29795C130048680E /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
-				60A6C4B4297960210048680E /* HomeViewController.swift */,
-				60A6C4B6297960A70048680E /* HomeViewModel.swift */,
 				60A6C4B8297964F40048680E /* HomeModel.swift */,
+				60A6C4B4297960210048680E /* HomeViewController.swift */,
 				60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */,
 				60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */,
+				60A6C4B6297960A70048680E /* HomeViewModel.swift */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
