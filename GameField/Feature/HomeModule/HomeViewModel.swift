@@ -18,9 +18,15 @@ protocol HomeViewModelDelegate {
 class HomeViewModel: HomeViewModelDelegate {
     weak var view: HomeViewControllerDelegate?
     
-    var gameList = [Game]()
+    var gameList = [Game]() {
+        didSet{
+            view?.collectionViewReloadData()
+        }
+    }
     
     func viewDidLoad() {
+        view?.prepareCollectionView()
+        getAllGames()
     
     }
     func numberOfItemsInSection() -> Int {
@@ -29,6 +35,20 @@ class HomeViewModel: HomeViewModelDelegate {
     
     func cellForItemAt(at indexPath: IndexPath) -> Game? {
         gameList[indexPath.row]
+    }
+    
+    
+    //MARK: - Private Methods
+    private func getAllGames(){
+        NetworkManager.shared.getAllGames(queryItems: []) {[weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let games):
+                self.gameList = games
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
@@ -32,6 +33,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(with model: Game) {
-        
+        layer.backgroundColor = UIColor.white.cgColor
+        layer.cornerRadius = 15
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1
+        ratingLabel.text = "Rate: " + model.rating.toString()
+        nameLabel.text = model.name
+        let url = URL(string: model.imageUrl)
+        backgroundImage.kf.setImage(with: url,placeholder: UIImage(systemName: "photo"))
     }
 }
