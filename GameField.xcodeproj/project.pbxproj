@@ -58,13 +58,11 @@
 		60A6C491297954290048680E /* GameField */ = {
 			isa = PBXGroup;
 			children = (
+				60A6C4AD29795BE40048680E /* Feature */,
+				60A6C4AC29795BDC0048680E /* CoreData */,
+				60A6C4AB29795BCB0048680E /* Network */,
 				60A6C4A9297959EC0048680E /* App */,
 				60A6C496297954290048680E /* ViewController.swift */,
-				60A6C498297954290048680E /* Main.storyboard */,
-				60A6C49E2979542A0048680E /* Assets.xcassets */,
-				60A6C4A02979542A0048680E /* LaunchScreen.storyboard */,
-				60A6C4A32979542A0048680E /* Info.plist */,
-				60A6C49B297954290048680E /* GameField.xcdatamodeld */,
 			);
 			path = GameField;
 			sourceTree = "<group>";
@@ -72,10 +70,76 @@
 		60A6C4A9297959EC0048680E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				60A6C494297954290048680E /* SceneDelegate.swift */,
 				60A6C492297954290048680E /* AppDelegate.swift */,
+				60A6C494297954290048680E /* SceneDelegate.swift */,
+				60A6C4A32979542A0048680E /* Info.plist */,
+				60A6C49E2979542A0048680E /* Assets.xcassets */,
+				60A6C4AA29795B6A0048680E /* Storyboards */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		60A6C4AA29795B6A0048680E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				60A6C4A02979542A0048680E /* LaunchScreen.storyboard */,
+				60A6C498297954290048680E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		60A6C4AB29795BCB0048680E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		60A6C4AC29795BDC0048680E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				60A6C49B297954290048680E /* GameField.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		60A6C4AD29795BE40048680E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				60A6C4AE29795C130048680E /* HomeModule */,
+				60A6C4B029795C460048680E /* DetailsModule */,
+				60A6C4AF29795C360048680E /* FavoriteListModule */,
+				60A6C4B129795C530048680E /* NoteModule */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		60A6C4AE29795C130048680E /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		60A6C4AF29795C360048680E /* FavoriteListModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteListModule;
+			sourceTree = "<group>";
+		};
+		60A6C4B029795C460048680E /* DetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailsModule;
+			sourceTree = "<group>";
+		};
+		60A6C4B129795C530048680E /* NoteModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NoteModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
