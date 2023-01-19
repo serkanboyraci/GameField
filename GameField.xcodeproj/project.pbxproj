@@ -19,6 +19,7 @@
 		60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */; };
 		60A6C4BD29796ED10048680E /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */; };
 		60A6C4BF2979D1600048680E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4BE2979D1600048680E /* NetworkManager.swift */; };
+		60A6C4C12979D5220048680E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4C02979D5220048680E /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		60A6C4BE2979D1600048680E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		60A6C4C02979D5220048680E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				60A6C4BE2979D1600048680E /* NetworkManager.swift */,
+				60A6C4C02979D5220048680E /* Endpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A6C4B5297960210048680E /* HomeViewController.swift in Sources */,
+				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
