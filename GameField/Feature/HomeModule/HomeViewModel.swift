@@ -31,8 +31,4 @@ class HomeViewModel: HomeViewModelDelegate {
         gameList[indexPath.row]
     }
     
-
-
-    
-    
 }
