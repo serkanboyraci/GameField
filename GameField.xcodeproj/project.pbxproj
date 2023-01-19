@@ -66,6 +66,7 @@
 		60A6C491297954290048680E /* GameField */ = {
 			isa = PBXGroup;
 			children = (
+				60A6C4A32979542A0048680E /* Info.plist */,
 				60A6C4AD29795BE40048680E /* Feature */,
 				60A6C4AC29795BDC0048680E /* CoreData */,
 				60A6C4AB29795BCB0048680E /* Network */,
@@ -79,7 +80,6 @@
 			children = (
 				60A6C492297954290048680E /* AppDelegate.swift */,
 				60A6C494297954290048680E /* SceneDelegate.swift */,
-				60A6C4A32979542A0048680E /* Info.plist */,
 				60A6C49E2979542A0048680E /* Assets.xcassets */,
 				60A6C4AA29795B6A0048680E /* Storyboards */,
 			);
