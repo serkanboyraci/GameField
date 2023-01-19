@@ -10,10 +10,7 @@ import UIKit
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var backgroundImage: UIImageView!
-    
     @IBOutlet weak var ratingLabel: UILabel!
-    
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     //MARK: - Property

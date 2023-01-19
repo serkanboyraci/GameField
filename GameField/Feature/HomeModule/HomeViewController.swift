@@ -31,10 +31,12 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier ,for: indexPath) as? HomeCollectionViewCell else {
             print("xib not found")
             return .init()
         }
+        
         guard let game = viewModel.cellForItemAt(at: indexPath) else { return .init() }
         
         cell.configureCell(with: game)
@@ -47,7 +49,6 @@ extension HomeViewController: HomeViewControllerDelegate {
     func prepareCollectionView() {
         gameCollectionView.dataSource = self
         gameCollectionView.register(HomeCollectionViewCell.nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
-    }
-        
+    }        
 }
 

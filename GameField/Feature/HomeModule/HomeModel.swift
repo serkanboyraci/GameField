@@ -21,6 +21,7 @@ struct Game: Decodable {
     }
 }
 
+
 struct GameResponseModel:  Decodable {
     let count: Int
     let next: String
