@@ -11,27 +11,14 @@ protocol HomeViewModelDelegate {
     var view: HomeViewControllerDelegate? {get set}
     
     func viewDidLoad()
-    func numberOfItemsInSection() -> Int
-    func cellForItemAt(at indexPath: IndexPath) -> Game?
 }
 
 class HomeViewModel: HomeViewModelDelegate {
-    weak var view: HomeViewControllerDelegate?
-    
-    var gameList = [Game]()
+    var view: HomeViewControllerDelegate?
     
     func viewDidLoad() {
-    
+        
     }
-    func numberOfItemsInSection() -> Int {
-        gameList.count
-    }
-    
-    func cellForItemAt(at indexPath: IndexPath) -> Game? {
-        gameList[indexPath.row]
-    }
-    
-
 
     
     
