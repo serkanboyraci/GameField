@@ -17,7 +17,7 @@ struct Game: Decodable {
         case id
         case name
         case rating
-        case imageUrl
+        case imageUrl = "background_image"
     }
 }
 
