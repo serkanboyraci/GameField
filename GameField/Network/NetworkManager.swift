@@ -8,14 +8,16 @@
 import Foundation
 
 class NetworkManager {
-
+    let shared = NetworkManager()
+    
+    private init(){}
     
     //MARK: - GET Request
-    private class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
+    private class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, URLSessionDataTaskError?) -> Void) -> URLSessionDataTask {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
                 DispatchQueue.main.async {
-                    completion(nil, error)
+                    completion(nil, URLSessionDataTaskError.noData)
                 }
                 return
             }
@@ -27,9 +29,32 @@ class NetworkManager {
                 }
             } catch {
                 print(error.localizedDescription)
+                completion(nil,URLSessionDataTaskError.dataParseError)
             }
         }
         task.resume()
         return task
     }
 }
+
+//MARK: - URLSessionDataTaskError
+enum URLSessionDataTaskError: Error {
+    case noData
+    case dataParseError
+}
+
+extension NetworkManager {
+    func getAllGames(queryItems: [URLQueryItem], completion: @escaping(Result<[Game],Error>) -> Void){
+        let url = Endpoint.getAllGames(queryItems: queryItems).url
+        NetworkManager.taskForGETRequest(url: url, responseType: GameResponseModel.self) { response, error in
+            guard let response = response else {
+                completion(.failure(error!))
+                print(error!.localizedDescription)
+                return
+            }
+            completion(.success(response.results))
+        }
+    }
+}
+
+
