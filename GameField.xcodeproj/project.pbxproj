@@ -17,6 +17,8 @@
 		60A6C4B5297960210048680E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4B4297960210048680E /* HomeViewController.swift */; };
 		60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4B6297960A70048680E /* HomeViewModel.swift */; };
 		60A6C4B9297964F40048680E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4B8297964F40048680E /* HomeModel.swift */; };
+		60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */; };
+		60A6C4BD29796ED10048680E /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		60A6C4B4297960210048680E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		60A6C4B6297960A70048680E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		60A6C4B8297964F40048680E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				60A6C4B4297960210048680E /* HomeViewController.swift */,
 				60A6C4B6297960A70048680E /* HomeViewModel.swift */,
 				60A6C4B8297964F40048680E /* HomeModel.swift */,
+				60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */,
+				60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */,
 			);
 			path = HomeModule;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				60A6C4A22979542A0048680E /* LaunchScreen.storyboard in Resources */,
 				60A6C49F2979542A0048680E /* Assets.xcassets in Resources */,
 				60A6C49A297954290048680E /* Main.storyboard in Resources */,
+				60A6C4BD29796ED10048680E /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 				60A6C497297954290048680E /* ViewController.swift in Sources */,
 				60A6C493297954290048680E /* AppDelegate.swift in Sources */,
 				60A6C495297954290048680E /* SceneDelegate.swift in Sources */,
+				60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
