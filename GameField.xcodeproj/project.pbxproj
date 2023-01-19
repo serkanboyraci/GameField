@@ -58,8 +58,7 @@
 		60A6C491297954290048680E /* GameField */ = {
 			isa = PBXGroup;
 			children = (
-				60A6C492297954290048680E /* AppDelegate.swift */,
-				60A6C494297954290048680E /* SceneDelegate.swift */,
+				60A6C4A9297959EC0048680E /* App */,
 				60A6C496297954290048680E /* ViewController.swift */,
 				60A6C498297954290048680E /* Main.storyboard */,
 				60A6C49E2979542A0048680E /* Assets.xcassets */,
@@ -68,6 +67,15 @@
 				60A6C49B297954290048680E /* GameField.xcdatamodeld */,
 			);
 			path = GameField;
+			sourceTree = "<group>";
+		};
+		60A6C4A9297959EC0048680E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				60A6C494297954290048680E /* SceneDelegate.swift */,
+				60A6C492297954290048680E /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
