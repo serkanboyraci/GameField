@@ -31,13 +31,29 @@ class DetailsViewController: UIViewController {
         viewModel.view = self
         viewModel.viewDidLoad()
     }
+    
+    @IBAction func favoriteButtonClicked(_ sender: Any) {
+        viewModel.favoriteButtonClicked()
+    }
 }
+
+//MARK: - DetailsViewControllerDelegate
 extension DetailsViewController: DetailsViewControllerDelegate {
+    func dataNotFound() {
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     func prepareInterfaceComponent(game: GameDetail) {
         nameLabel.text = game.name
         ratingLabel.text = game.rating.toString()
         textView.text = game.descriptionRaw
         let url = URL(string: game.backgroundImageAdditional)
         imageView.kf.setImage(with: url)
+    }
+    
+    func changeButtonColor(_ gameIsFavorite: Bool) {
+        favoriteButton.tintColor = gameIsFavorite ? .systemRed : .lightGray
     }
 }

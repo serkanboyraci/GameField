@@ -33,29 +33,10 @@ final class HomeViewController: UIViewController {
         detailsVC.id = viewModel.getGameID()
     }
     @IBAction func menuButtonCicked(_ sender: Any) {
-        let actionSheet = UIAlertController(title: LocalizableConstant.menuActionSheetTitle, message: LocalizableConstant.menuActionSheetMessage, preferredStyle: .actionSheet)
-        let closeButton = UIAlertAction(title: "Cancel", style: .cancel)
-        actionSheet.addAction(closeButton)
-        
-        let ratingAction = createUIAlertAction(menu: MenuButtonList.rating)
-        actionSheet.addAction(ratingAction)
-        
-        let nameAction = createUIAlertAction(menu: MenuButtonList.name)
-        actionSheet.addAction(nameAction)
-        
-        let favoriteAction = createUIAlertAction(menu: MenuButtonList.favorite)
-        actionSheet.addAction(favoriteAction)
-        
-        self.present(actionSheet, animated: true)
+  
     }
     
-    private func createUIAlertAction(menu: MenuButtonList) -> UIAlertAction {
-        let action = UIAlertAction(title: menu.title, style: .default) { [weak self] _ in
-            self?.viewModel.getGameOrdering(with: menu.searh)
-            self?.dismiss(animated: true)
-        }
-        return action
-    }
+    
     
     //MARK: - Private Methods
     private func prepareCollectionView() {
@@ -64,13 +45,13 @@ final class HomeViewController: UIViewController {
         gameCollectionView.backgroundColor = .systemGray3
         gameCollectionView.dataSource = self
         gameCollectionView.delegate = self
-        gameCollectionView.register(GameCollectionViewCell.nib, forCellWithReuseIdentifier: GameCollectionViewCell.identifier)
+        gameCollectionView.register(HomeCollectionViewCell.nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
     }
     
     private func prepareSearchController(){
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
-        search.searchBar.placeholder = LocalizableConstant.searchBarPlaceholder
+        //search.searchBar.placeholder = LocalizableConstant.searchBarPlaceholder
         search.searchBar.barTintColor = .systemIndigo
         search.searchBar.searchTextField.textColor = .darkGray
         search.searchBar.searchTextField.tokenBackgroundColor = .red
@@ -100,7 +81,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCollectionViewCell.identifier ,for: indexPath) as? GameCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier ,for: indexPath) as? HomeCollectionViewCell else {
             print("xib not found")
             return .init()
         }
