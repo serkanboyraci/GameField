@@ -7,8 +7,16 @@
 
 import UIKit
 
+
+protocol FavoriteListVCDelegate: AnyObject, SeguePerformable, Alert {
+    func tableViewReloadData()
+    func prepareTableView()
+}
+
 class FavoriteListViewController: UIViewController {
 
+    @IBOutlet weak var favoriteListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
