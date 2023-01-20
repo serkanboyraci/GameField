@@ -20,7 +20,7 @@ class CoreDataFavoriteGameClient {
     }
     
     //MARK: - Methods
-    func saveFavoriteGame(id: String, name: String, completion: @escaping(Result<CoreDataCustomSuccesMessage,CoreDataCustomError>) -> Void){
+    func saveFavoriteGame(id: String, name: String, completion: @escaping(Result<CoreDataCustomSuccessMessage,CoreDataCustomError>) -> Void){
         coredata.saveObject() { object in
             object.setValue(id, forKey: "id")
             object.setValue(true, forKey: "isFavorite")
@@ -30,7 +30,7 @@ class CoreDataFavoriteGameClient {
         }
     }
     
-    func deleteFavoriteGame(id: String, completion: @escaping(Result<CoreDataCustomSuccesMessage,CoreDataCustomError>) -> Void) {
+    func deleteFavoriteGame(id: String, completion: @escaping(Result<CoreDataCustomSuccessMessage,CoreDataCustomError>) -> Void) {
         guard let willDeleteGame = coredata.getObject(by: id) as? FavoriteGame else { return }
         coredata.deleteObject(model: willDeleteGame) { result in
             completion(result)
