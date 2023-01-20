@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Favorite List View Controller-->
         <scene sceneID="2o7-0W-6y9">
             <objects>
-                <viewController id="EGR-h2-w0g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGR-h2-w0g" customClass="FavoriteListViewController" customModule="GameField" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gQv-9S-s5J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1R2-rk-zab"/>
                     <connections>
+                        <outlet property="favoriteListTableView" destination="0PS-My-g7v" id="Oqz-hM-rp5"/>
                         <segue destination="qYt-UZ-Agi" kind="show" id="tSZ-hB-dH1"/>
                     </connections>
                 </viewController>
