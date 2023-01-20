@@ -36,6 +36,9 @@
 		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
 		60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */; };
 		60A6C4E4297ABA630048680E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E3297ABA630048680E /* Identifier.swift */; };
+		60A6C4E6297ABC690048680E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E5297ABC690048680E /* NetworkService.swift */; };
+		60A6C4E8297ABCB00048680E /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E7297ABCB00048680E /* NetworkServiceError.swift */; };
+		60A6C4EA297ABD520048680E /* QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E9297ABD520048680E /* QueryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
 		60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		60A6C4E3297ABA630048680E /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		60A6C4E5297ABC690048680E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		60A6C4E7297ABCB00048680E /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
+		60A6C4E9297ABD520048680E /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,9 @@
 			children = (
 				60A6C4BE2979D1600048680E /* NetworkManager.swift */,
 				60A6C4C02979D5220048680E /* Endpoint.swift */,
+				60A6C4E5297ABC690048680E /* NetworkService.swift */,
+				60A6C4E7297ABCB00048680E /* NetworkServiceError.swift */,
+				60A6C4E9297ABD520048680E /* QueryItem.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 				60A6C4B5297960210048680E /* HomeViewController.swift in Sources */,
 				60A6C4CD297A008D0048680E /* SeguePerformable.swift in Sources */,
 				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
+				60A6C4EA297ABD520048680E /* QueryItem.swift in Sources */,
 				60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */,
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
 				60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */,
@@ -304,6 +314,8 @@
 				60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
+				60A6C4E8297ABCB00048680E /* NetworkServiceError.swift in Sources */,
+				60A6C4E6297ABC690048680E /* NetworkService.swift in Sources */,
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
