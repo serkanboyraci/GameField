@@ -21,9 +21,29 @@ struct Game: Decodable {
     }
 }
 
-struct GameResponseModel:  Decodable {
+enum MenuButtonList {
+    case name
+    case rating
+    case favorite
+}
+
+extension MenuButtonList {
+    var searh: String {
+        switch self {
+        case .name:
+            return "-name"
+        case .rating:
+            return "-rating"
+        case .favorite:
+            return ""
+        }
+    }
+
+}
+
+
+struct GameResponseModel: Decodable {
     let count: Int
     let next: String
     let results: [Game]
 }
-
