@@ -31,6 +31,7 @@
 		60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */; };
 		60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */; };
 		60A6C4DA297A9B790048680E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 60A6C4D9297A9B790048680E /* ProgressHUD */; };
+		60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DB297AB7AB0048680E /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		60A6C4D2297A8EB40048680E /* CoreDataFavoriteGameClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteGameClient.swift; sourceTree = "<group>"; };
 		60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSucceessMessage.swift; sourceTree = "<group>"; };
 		60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrorMessage.swift; sourceTree = "<group>"; };
+		60A6C4DB297AB7AB0048680E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				60A6C4C62979E0CA0048680E /* Extension.swift */,
 				60A6C4CC297A008D0048680E /* SeguePerformable.swift */,
+				60A6C4DB297AB7AB0048680E /* Alert.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
 				60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */,
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
+				60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */,
 				60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
