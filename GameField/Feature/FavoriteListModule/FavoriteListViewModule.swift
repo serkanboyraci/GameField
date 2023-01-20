@@ -34,7 +34,7 @@ class FavoriteListViewModel: FavoriteListViewModelInterface {
         view?.prepareTableView()
         getFavoriteGames()
         favoriteStatusWillChange()
-        favoriteGameDetailDataNotFound()
+        
         
     }
     
