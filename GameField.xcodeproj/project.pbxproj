@@ -35,6 +35,7 @@
 		60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DD297AB8310048680E /* NavigationPushable.swift */; };
 		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
 		60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */; };
+		60A6C4E4297ABA630048680E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E3297ABA630048680E /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		60A6C4DD297AB8310048680E /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
 		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
 		60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		60A6C4E3297ABA630048680E /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				60A6C4DD297AB8310048680E /* NavigationPushable.swift */,
 				60A6C4DF297AB9000048680E /* NavigationPresentable.swift */,
 				60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */,
+				60A6C4E3297ABA630048680E /* Identifier.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */,
 				60A6C4D3297A8EB40048680E /* CoreDataFavoriteGameClient.swift in Sources */,
 				60A6C4CB2979FFF30048680E /* DetailsViewModel.swift in Sources */,
+				60A6C4E4297ABA630048680E /* Identifier.swift in Sources */,
 				60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
