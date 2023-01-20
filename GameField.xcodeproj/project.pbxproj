@@ -36,6 +36,7 @@
 		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
 		60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */; };
 		60A6C4E4297ABA630048680E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E3297ABA630048680E /* Identifier.swift */; };
+		60A6C4E6297ABC690048680E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E5297ABC690048680E /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
 		60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		60A6C4E3297ABA630048680E /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		60A6C4E5297ABC690048680E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				60A6C4BE2979D1600048680E /* NetworkManager.swift */,
 				60A6C4C02979D5220048680E /* Endpoint.swift */,
+				60A6C4E5297ABC690048680E /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
+				60A6C4E6297ABC690048680E /* NetworkService.swift in Sources */,
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
