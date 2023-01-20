@@ -22,25 +22,25 @@ class CoreDataManager: NSObject {
     }
     
     //MARK: - Methods
-    func saveObject(willSaveObject: (NSManagedObject) -> Void, completion: @escaping(Result<CoreDataCustomSuccesMessage, CoreDataCustomError>) -> Void) {
+    func saveObject(willSaveObject: (NSManagedObject) -> Void, completion: @escaping(Result<CoreDataCustomSuccessMessage, CoreDataCustomError>) -> Void) {
         guard let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedContext) else { return }
         let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
         willSaveObject(managedObject)
         
         do {
             try managedContext.save()
-            completion(.success(CoreDataCustomSuccesMessage.saveSuccess))
+            completion(.success(CoreDataCustomSuccessMessage.saveSuccess))
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
             completion(.failure(CoreDataCustomError.saveError))
         }
     }
     
-    func deleteObject<modelType: NSManagedObject>(model: modelType, completion: @escaping(Result<CoreDataCustomSuccesMessage,CoreDataCustomError>) -> Void){
+    func deleteObject<modelType: NSManagedObject>(model: modelType, completion: @escaping(Result<CoreDataCustomSuccessMessage,CoreDataCustomError>) -> Void){
         managedContext.delete(model)
         do {
             try managedContext.save()
-            completion(.success(CoreDataCustomSuccesMessage.deleteSucces))
+            completion(.success(CoreDataCustomSuccessMessage.deleteSucces))
         } catch let error as NSError {
             print(error.localizedDescription)
             completion(.failure(CoreDataCustomError.deleteError))
