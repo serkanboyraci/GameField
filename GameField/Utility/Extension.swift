@@ -24,3 +24,10 @@ extension Optional where Wrapped == String {
         self == nil || self == ""
     }
 }
+
+extension FavoriteGame {
+    var integerID: Int {
+        return Int(self.id!)!
+    }
+}
+
