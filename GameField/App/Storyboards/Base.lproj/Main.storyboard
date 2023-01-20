@@ -16,10 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="gQv-9S-s5J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0PS-My-g7v">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QSV-kd-OGJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0PS-My-g7v" firstAttribute="top" secondItem="QSV-kd-OGJ" secondAttribute="top" id="Kaf-Qc-VW4"/>
+                            <constraint firstItem="QSV-kd-OGJ" firstAttribute="bottom" secondItem="0PS-My-g7v" secondAttribute="bottom" id="P1z-jc-hWp"/>
+                            <constraint firstItem="QSV-kd-OGJ" firstAttribute="trailing" secondItem="0PS-My-g7v" secondAttribute="trailing" id="RtO-pE-NOv"/>
+                            <constraint firstItem="0PS-My-g7v" firstAttribute="leading" secondItem="QSV-kd-OGJ" secondAttribute="leading" id="ofp-Wk-ott"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1R2-rk-zab"/>
+                    <connections>
+                        <segue destination="qYt-UZ-Agi" kind="show" id="tSZ-hB-dH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXh-yA-HKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,8 +47,20 @@
                     <view key="view" contentMode="scaleToFill" id="dhv-Ci-kt4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4uK-YW-vl5">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hYP-dR-dTD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4uK-YW-vl5" firstAttribute="top" secondItem="hYP-dR-dTD" secondAttribute="top" id="6Z5-Jo-ibw"/>
+                            <constraint firstItem="4uK-YW-vl5" firstAttribute="leading" secondItem="hYP-dR-dTD" secondAttribute="leading" id="8GA-ZE-52n"/>
+                            <constraint firstItem="hYP-dR-dTD" firstAttribute="bottom" secondItem="4uK-YW-vl5" secondAttribute="bottom" id="DRS-3i-wtb"/>
+                            <constraint firstItem="hYP-dR-dTD" firstAttribute="trailing" secondItem="4uK-YW-vl5" secondAttribute="trailing" id="z14-1t-shg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="1jf-OU-oFx"/>
                 </viewController>
@@ -241,6 +268,9 @@
             <point key="canvasLocation" x="189" y="380"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tSZ-hB-dH1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.down.heart.fill" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
