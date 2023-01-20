@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60430731297B41DD00E50825 /* FavoriteListViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430730297B41DD00E50825 /* FavoriteListViewModule.swift */; };
+		60430733297B422D00E50825 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430732297B422D00E50825 /* FavoriteListViewController.swift */; };
+		60430736297B425D00E50825 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430734297B425D00E50825 /* FavoriteListCell.swift */; };
+		60430737297B425D00E50825 /* FavoriteListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60430735297B425D00E50825 /* FavoriteListCell.xib */; };
 		60A6C493297954290048680E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C492297954290048680E /* AppDelegate.swift */; };
 		60A6C495297954290048680E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C494297954290048680E /* SceneDelegate.swift */; };
 		60A6C49A297954290048680E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A6C498297954290048680E /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60430730297B41DD00E50825 /* FavoriteListViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModule.swift; sourceTree = "<group>"; };
+		60430732297B422D00E50825 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
+		60430734297B425D00E50825 /* FavoriteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListCell.swift; sourceTree = "<group>"; };
+		60430735297B425D00E50825 /* FavoriteListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteListCell.xib; sourceTree = "<group>"; };
 		60A6C48F297954290048680E /* GameField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A6C492297954290048680E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A6C494297954290048680E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +196,10 @@
 		60A6C4AF29795C360048680E /* FavoriteListModule */ = {
 			isa = PBXGroup;
 			children = (
+				60430732297B422D00E50825 /* FavoriteListViewController.swift */,
+				60430734297B425D00E50825 /* FavoriteListCell.swift */,
+				60430735297B425D00E50825 /* FavoriteListCell.xib */,
+				60430730297B41DD00E50825 /* FavoriteListViewModule.swift */,
 			);
 			path = FavoriteListModule;
 			sourceTree = "<group>";
@@ -292,6 +304,7 @@
 				60A6C4A22979542A0048680E /* LaunchScreen.storyboard in Resources */,
 				60A6C49F2979542A0048680E /* Assets.xcassets in Resources */,
 				60A6C49A297954290048680E /* Main.storyboard in Resources */,
+				60430737297B425D00E50825 /* FavoriteListCell.xib in Resources */,
 				60A6C4BD29796ED10048680E /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,12 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60430733297B422D00E50825 /* FavoriteListViewController.swift in Sources */,
 				60A6C4B5297960210048680E /* HomeViewController.swift in Sources */,
 				60A6C4CD297A008D0048680E /* SeguePerformable.swift in Sources */,
 				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
 				60A6C4EA297ABD520048680E /* QueryItem.swift in Sources */,
 				60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */,
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
+				60430736297B425D00E50825 /* FavoriteListCell.swift in Sources */,
 				60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */,
 				60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */,
 				60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */,
@@ -319,6 +334,7 @@
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
+				60430731297B41DD00E50825 /* FavoriteListViewModule.swift in Sources */,
 				60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */,
 				60A6C4C72979E0CA0048680E /* Extension.swift in Sources */,
 				60A6C4BF2979D1600048680E /* NetworkManager.swift in Sources */,
