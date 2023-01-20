@@ -33,6 +33,7 @@
 		60A6C4DA297A9B790048680E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 60A6C4D9297A9B790048680E /* ProgressHUD */; };
 		60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DB297AB7AB0048680E /* Alert.swift */; };
 		60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DD297AB8310048680E /* NavigationPushable.swift */; };
+		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrorMessage.swift; sourceTree = "<group>"; };
 		60A6C4DB297AB7AB0048680E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		60A6C4DD297AB8310048680E /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
+		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				60A6C4CC297A008D0048680E /* SeguePerformable.swift */,
 				60A6C4DB297AB7AB0048680E /* Alert.swift */,
 				60A6C4DD297AB8310048680E /* NavigationPushable.swift */,
+				60A6C4DF297AB9000048680E /* NavigationPresentable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
 				60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */,
 				60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */,
+				60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
