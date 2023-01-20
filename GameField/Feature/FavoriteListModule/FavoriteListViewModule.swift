@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol FavoriListViewModelInterface {
-    var view: FavoriteListVCDelegate? { get set}
+protocol FavoriteListViewModelInterface {
+    var view: FavoriteListViewControllerDelegate? { get set}
     
     func viewDidLoad()
     func numberOfRowsInSection() -> Int
@@ -17,9 +17,9 @@ protocol FavoriListViewModelInterface {
     func deleteButtonAction(at index: Int)
 }
 
-final class FavoriListViewModel: FavoriListViewModelInterface {
+class FavoriteListViewModel: FavoriteListViewModelInterface {
     //MARK: - Property
-    var view: FavoriteListVCDelegate?
+    var view: FavoriteListViewControllerDelegate?
     var selectedFavoriteGame: FavoriteGame?
     private var favoriteGames = [FavoriteGame]() {
         didSet{
@@ -87,12 +87,5 @@ final class FavoriListViewModel: FavoriListViewModelInterface {
                                                    selector: #selector(getFavoriteGames))
     }
     
-    private func favoriteGameDetailDataNotFound(){
-        let name = CommunicationMessage.favoriteGameDetailDataNotFound.rawValue
-        CommunicationBetweenModules.shared.observe(observer: self, name: name, selector: #selector(showError))
-    }
-    
-    @objc private func showError(){
-        view?.showErrorAlert(message: LocalizableConstant.dataParseError)
-    }
+
 }
