@@ -19,7 +19,7 @@ protocol HomeViewModelDelegate {
     func getGameOrdering(with queryValue: String)
 }
 
-final class HomeViewModel: HomeViewModelDelegate {
+class HomeViewModel: HomeViewModelDelegate {
     //MARK: - Property
     weak var view: HomeViewControllerDelegate?
     private var id: Int?

@@ -12,9 +12,9 @@ protocol DetailsViewModelDelegate {
     
     func viewDidLoad(id: Int)
 }
-
-final class DetailsViewModel: DetailsViewModelDelegate {
+class DetailsViewModel: DetailsViewModelDelegate {
     //MARK: - Property
+    private lazy var networkManager: NetworkManagerProtocol = NetworkManager()
     var view: DetailsViewControllerDelegate?
     
     //MARK: - Lifecycle
@@ -23,13 +23,18 @@ final class DetailsViewModel: DetailsViewModelDelegate {
     }
     
     //MARK: - Private Methods
-    private func getGameDetails(by id: Int){
-        NetworkManager.shared.getGameDetails(by: id) { [weak self] result in
+    func getGameDetails(by id: Int){
+        view?.startProgressAnimating()
+        networkManager.getGameDetails(by: id) { [weak self] result in
+            self?.view?.stopAnimating()
             switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
+            case .failure(_):
+                self?.sendNotificationForDataNotFound()
+                self?.view?.popViewController()
+                
             case .success(let game):
                 self?.view?.prepareInterfaceComponent(game: game)
+                self?.game = game
             }
         }
     }
