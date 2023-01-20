@@ -32,6 +32,7 @@
 		60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */; };
 		60A6C4DA297A9B790048680E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 60A6C4D9297A9B790048680E /* ProgressHUD */; };
 		60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DB297AB7AB0048680E /* Alert.swift */; };
+		60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DD297AB8310048680E /* NavigationPushable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSucceessMessage.swift; sourceTree = "<group>"; };
 		60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrorMessage.swift; sourceTree = "<group>"; };
 		60A6C4DB297AB7AB0048680E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		60A6C4DD297AB8310048680E /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				60A6C4C62979E0CA0048680E /* Extension.swift */,
 				60A6C4CC297A008D0048680E /* SeguePerformable.swift */,
 				60A6C4DB297AB7AB0048680E /* Alert.swift */,
+				60A6C4DD297AB8310048680E /* NavigationPushable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */,
 				60A6C4D3297A8EB40048680E /* CoreDataFavoriteGameClient.swift in Sources */,
 				60A6C4CB2979FFF30048680E /* DetailsViewModel.swift in Sources */,
+				60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
