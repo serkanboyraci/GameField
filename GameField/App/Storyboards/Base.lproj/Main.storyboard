@@ -159,6 +159,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favoriteButton" destination="HOR-M9-GGL" id="WYV-jz-sQ3"/>
                         <outlet property="imageView" destination="J69-Zp-QtJ" id="A4T-Uy-BML"/>
                         <outlet property="nameLabel" destination="tls-IF-Rjm" id="n9s-Q3-8i1"/>
                         <outlet property="ratingLabel" destination="dxe-9i-OEW" id="JAi-v6-tuh"/>
