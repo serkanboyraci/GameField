@@ -70,7 +70,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TFD-fu-c7a" secondAttribute="trailing" id="Z5x-PF-p8d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nvu-m5-d7a"/>
+                    <navigationItem key="navigationItem" id="nvu-m5-d7a">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="OCY-7t-Y6e">
+                            <connections>
+                                <action selector="menuButtonCicked:" destination="BYZ-38-t0r" id="ISv-Ts-Ya9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="gameCollectionView" destination="TFD-fu-c7a" id="0d1-mc-1Gg"/>
                     </connections>
@@ -228,6 +234,7 @@
         <image name="arrow.down.heart.fill" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

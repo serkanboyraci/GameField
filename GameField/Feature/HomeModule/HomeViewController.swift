@@ -7,54 +7,77 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate: AnyObject {
-    func prepareCollectionView()
+protocol HomeViewControllerDelegate: AnyObject,SeguePerformable,Alert {
+    func prepareComponents()
     func collectionViewReloadData()
-    
-    
 }
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
+    //MARK: - IBOutlet
+    @IBOutlet private weak var gameCollectionView: UICollectionView!
     
-    @IBOutlet weak var gameCollectionView: UICollectionView!
-    private lazy var viewModel: HomeViewModelDelegate = HomeViewModel()
-
+    //MARK: - Property
+    private var viewModel = HomeViewModel()
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.view = self
-        viewModel.viewDidLoad() 
-    }
-}
-
-//MARK: - CollectionViewDataSource
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItemsInSection()
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier ,for: indexPath) as? HomeCollectionViewCell else {
-            print("xib not found")
-            return .init()
-        }
-        guard let game = viewModel.cellForItemAt(at: indexPath) else { return .init() }
+        viewModel.viewDidLoad()
         
-        cell.configureCell(with: game)
-        return cell
-    }
-}
-
-//MARK: - HomepageViewControllerDelegate
-extension HomeViewController: HomeViewControllerDelegate {
-    func collectionViewReloadData() {
-        gameCollectionView.reloadData()
     }
     
-    func prepareCollectionView() {
+    //MARK: - Override Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
+        detailsVC.id = viewModel.getGameID()
+    }
+    @IBAction func menuButtonCicked(_ sender: Any) {
+        let actionSheet = UIAlertController(title: LocalizableConstant.menuActionSheetTitle, message: LocalizableConstant.menuActionSheetMessage, preferredStyle: .actionSheet)
+        let closeButton = UIAlertAction(title: "Cancel", style: .cancel)
+        actionSheet.addAction(closeButton)
+        
+        let ratingAction = createUIAlertAction(menu: MenuButtonList.rating)
+        actionSheet.addAction(ratingAction)
+        
+        let nameAction = createUIAlertAction(menu: MenuButtonList.name)
+        actionSheet.addAction(nameAction)
+        
+        let favoriteAction = createUIAlertAction(menu: MenuButtonList.favorite)
+        actionSheet.addAction(favoriteAction)
+        
+        self.present(actionSheet, animated: true)
+    }
+    
+    private func createUIAlertAction(menu: MenuButtonList) -> UIAlertAction {
+        let action = UIAlertAction(title: menu.title, style: .default) { [weak self] _ in
+            self?.viewModel.getGameOrdering(with: menu.searh)
+            self?.dismiss(animated: true)
+        }
+        return action
+    }
+    
+    //MARK: - Private Methods
+    private func prepareCollectionView() {
         gameCollectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionViewConfig()
         gameCollectionView.backgroundColor = .systemGray3
         gameCollectionView.dataSource = self
-        gameCollectionView.register(HomeCollectionViewCell.nib, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
+        gameCollectionView.delegate = self
+        gameCollectionView.register(GameCollectionViewCell.nib, forCellWithReuseIdentifier: GameCollectionViewCell.identifier)
+    }
+    
+    private func prepareSearchController(){
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.searchBar.placeholder = LocalizableConstant.searchBarPlaceholder
+        search.searchBar.barTintColor = .systemIndigo
+        search.searchBar.searchTextField.textColor = .darkGray
+        search.searchBar.searchTextField.tokenBackgroundColor = .red
+        search.searchBar.searchTextField.backgroundColor = .white
+        search.searchBar.layer.borderWidth = 1
+        search.searchBar.layer.borderColor = UIColor.systemIndigo.cgColor
+        navigationItem.searchController = search
     }
     
     
@@ -70,6 +93,45 @@ extension HomeViewController: HomeViewControllerDelegate {
     }
 }
 
+//MARK: - CollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.numberOfItemsInSection()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameCollectionViewCell.identifier ,for: indexPath) as? GameCollectionViewCell else {
+            print("xib not found")
+            return .init()
+        }
+        guard let game = viewModel.cellForItemAt(at: indexPath.row) else { return .init() }
+        
+        cell.configureCell(with: game)
+        return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(at: indexPath.row)
+    }
+}
+
+//MARK: - HomepageViewControllerDelegate
+extension HomeViewController: HomeViewControllerDelegate {
+    func prepareComponents() {
+        view.backgroundColor = .systemGray3
+        navigationItem.title = "RAWG"
+        prepareCollectionView()
+        prepareSearchController()
+    }
+    
+    func collectionViewReloadData() {
+        gameCollectionView.reloadData()
+    }
+}
+
 //MARK: - UISearchResultsUpdating
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
@@ -77,4 +139,3 @@ extension HomeViewController: UISearchResultsUpdating {
         viewModel.updateSearchResults(text: text)
     }
 }
-
