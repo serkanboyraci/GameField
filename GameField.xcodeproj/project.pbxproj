@@ -34,6 +34,7 @@
 		60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DB297AB7AB0048680E /* Alert.swift */; };
 		60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DD297AB8310048680E /* NavigationPushable.swift */; };
 		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
+		60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		60A6C4DB297AB7AB0048680E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		60A6C4DD297AB8310048680E /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
 		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
+		60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				60A6C4DB297AB7AB0048680E /* Alert.swift */,
 				60A6C4DD297AB8310048680E /* NavigationPushable.swift */,
 				60A6C4DF297AB9000048680E /* NavigationPresentable.swift */,
+				60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
+				60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */,
 				60A6C4C72979E0CA0048680E /* Extension.swift in Sources */,
 				60A6C4BF2979D1600048680E /* NetworkManager.swift in Sources */,
 				60A6C493297954290048680E /* AppDelegate.swift in Sources */,
