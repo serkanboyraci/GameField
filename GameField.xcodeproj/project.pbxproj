@@ -26,6 +26,10 @@
 		60A6C4CB2979FFF30048680E /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4CA2979FFF30048680E /* DetailsViewModel.swift */; };
 		60A6C4CD297A008D0048680E /* SeguePerformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4CC297A008D0048680E /* SeguePerformable.swift */; };
 		60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4CE297A8B840048680E /* DetailsModel.swift */; };
+		60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D0297A8E070048680E /* CoreDataManager.swift */; };
+		60A6C4D3297A8EB40048680E /* CoreDataFavoriteGameClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D2297A8EB40048680E /* CoreDataFavoriteGameClient.swift */; };
+		60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */; };
+		60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		60A6C4CA2979FFF30048680E /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		60A6C4CC297A008D0048680E /* SeguePerformable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePerformable.swift; sourceTree = "<group>"; };
 		60A6C4CE297A8B840048680E /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
+		60A6C4D0297A8E070048680E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		60A6C4D2297A8EB40048680E /* CoreDataFavoriteGameClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteGameClient.swift; sourceTree = "<group>"; };
+		60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSucceessMessage.swift; sourceTree = "<group>"; };
+		60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				60A6C49B297954290048680E /* GameField.xcdatamodeld */,
+				60A6C4D0297A8E070048680E /* CoreDataManager.swift */,
+				60A6C4D2297A8EB40048680E /* CoreDataFavoriteGameClient.swift */,
+				60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */,
+				60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -265,7 +277,10 @@
 			files = (
 				60A6C4B5297960210048680E /* HomeViewController.swift in Sources */,
 				60A6C4CD297A008D0048680E /* SeguePerformable.swift in Sources */,
+				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
+				60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */,
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
+				60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
@@ -276,6 +291,7 @@
 				60A6C493297954290048680E /* AppDelegate.swift in Sources */,
 				60A6C495297954290048680E /* SceneDelegate.swift in Sources */,
 				60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */,
+				60A6C4D3297A8EB40048680E /* CoreDataFavoriteGameClient.swift in Sources */,
 				60A6C4CB2979FFF30048680E /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
