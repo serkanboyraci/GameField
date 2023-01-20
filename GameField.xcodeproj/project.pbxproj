@@ -31,6 +31,11 @@
 		60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */; };
 		60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */; };
 		60A6C4DA297A9B790048680E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 60A6C4D9297A9B790048680E /* ProgressHUD */; };
+		60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DB297AB7AB0048680E /* Alert.swift */; };
+		60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DD297AB8310048680E /* NavigationPushable.swift */; };
+		60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4DF297AB9000048680E /* NavigationPresentable.swift */; };
+		60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */; };
+		60A6C4E4297ABA630048680E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6C4E3297ABA630048680E /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		60A6C4D2297A8EB40048680E /* CoreDataFavoriteGameClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteGameClient.swift; sourceTree = "<group>"; };
 		60A6C4D4297A8F860048680E /* CoreDataSucceessMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSucceessMessage.swift; sourceTree = "<group>"; };
 		60A6C4D6297A8FCC0048680E /* CoreDataErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrorMessage.swift; sourceTree = "<group>"; };
+		60A6C4DB297AB7AB0048680E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		60A6C4DD297AB8310048680E /* NavigationPushable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPushable.swift; sourceTree = "<group>"; };
+		60A6C4DF297AB9000048680E /* NavigationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresentable.swift; sourceTree = "<group>"; };
+		60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		60A6C4E3297ABA630048680E /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +205,11 @@
 			children = (
 				60A6C4C62979E0CA0048680E /* Extension.swift */,
 				60A6C4CC297A008D0048680E /* SeguePerformable.swift */,
+				60A6C4DB297AB7AB0048680E /* Alert.swift */,
+				60A6C4DD297AB8310048680E /* NavigationPushable.swift */,
+				60A6C4DF297AB9000048680E /* NavigationPresentable.swift */,
+				60A6C4E1297ABA1B0048680E /* NotificationCenter.swift */,
+				60A6C4E3297ABA630048680E /* Identifier.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -284,12 +299,15 @@
 				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
 				60A6C4D7297A8FCC0048680E /* CoreDataErrorMessage.swift in Sources */,
 				60A6C4C12979D5220048680E /* Endpoint.swift in Sources */,
+				60A6C4DC297AB7AB0048680E /* Alert.swift in Sources */,
 				60A6C4D1297A8E070048680E /* CoreDataManager.swift in Sources */,
+				60A6C4E0297AB9000048680E /* NavigationPresentable.swift in Sources */,
 				60A6C4B7297960A70048680E /* HomeViewModel.swift in Sources */,
 				60A6C4CF297A8B840048680E /* DetailsModel.swift in Sources */,
 				60A6C4C92979EE620048680E /* DetailsViewController.swift in Sources */,
 				60A6C49D297954290048680E /* GameField.xcdatamodeld in Sources */,
 				60A6C4B9297964F40048680E /* HomeModel.swift in Sources */,
+				60A6C4E2297ABA1B0048680E /* NotificationCenter.swift in Sources */,
 				60A6C4C72979E0CA0048680E /* Extension.swift in Sources */,
 				60A6C4BF2979D1600048680E /* NetworkManager.swift in Sources */,
 				60A6C493297954290048680E /* AppDelegate.swift in Sources */,
@@ -297,6 +315,8 @@
 				60A6C4BC29796ED10048680E /* HomeCollectionViewCell.swift in Sources */,
 				60A6C4D3297A8EB40048680E /* CoreDataFavoriteGameClient.swift in Sources */,
 				60A6C4CB2979FFF30048680E /* DetailsViewModel.swift in Sources */,
+				60A6C4E4297ABA630048680E /* Identifier.swift in Sources */,
+				60A6C4DE297AB8310048680E /* NavigationPushable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
