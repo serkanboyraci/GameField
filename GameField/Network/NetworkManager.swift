@@ -55,6 +55,19 @@ extension NetworkManager {
             completion(.success(response.results))
         }
     }
+    
+    
+    func getGameDetails(by id: Int, completion: @escaping(Result<GameDetail,Error>) -> Void){
+        let url = Endpoint.getGameDetails(withID: id.toString()).url
+        NetworkManager.taskForGETRequest(url: url, responseType: GameDetail.self) { response, error in
+            guard let response else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.success(response))
+        }
+    }
+    
 }
 
 

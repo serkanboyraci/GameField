@@ -79,12 +79,97 @@
             </objects>
             <point key="canvasLocation" x="1144" y="-353"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="RLQ-sh-NLB">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qYt-UZ-Agi" customClass="DetailsViewController" customModule="GameField" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udQ-Fl-4js">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J69-Zp-QtJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="311"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J69-Zp-QtJ" secondAttribute="height" multiplier="195:152" id="dyU-3Y-JI3"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="256" translatesAutoresizingMaskIntoConstraints="NO" id="uvt-wp-CVc">
+                                <rect key="frame" x="16" y="404" width="361" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ratingLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-9i-OEW">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-M9-GGL">
+                                        <rect key="frame" x="316" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="6yd-iw-Uem"/>
+                                            <constraint firstAttribute="height" constant="45" id="RCF-Ri-Pij"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="heart.fill" catalog="system" title="Button" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" image="heart.fill" catalog="system">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t9u-M9-Mw5">
+                                <rect key="frame" x="16" y="457" width="362" height="337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tls-IF-Rjm">
+                                <rect key="frame" x="16" y="329" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T5N-Zd-1DA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tls-IF-Rjm" firstAttribute="leading" secondItem="udQ-Fl-4js" secondAttribute="leading" constant="16" id="2NM-Ky-7dJ"/>
+                            <constraint firstItem="tls-IF-Rjm" firstAttribute="top" secondItem="J69-Zp-QtJ" secondAttribute="bottom" constant="22.666666666666686" id="4sr-ra-xaX"/>
+                            <constraint firstItem="T5N-Zd-1DA" firstAttribute="trailing" secondItem="uvt-wp-CVc" secondAttribute="trailing" constant="16" id="6oh-VR-Zhf"/>
+                            <constraint firstItem="J69-Zp-QtJ" firstAttribute="top" secondItem="udQ-Fl-4js" secondAttribute="topMargin" constant="-59" id="Md3-la-x8J"/>
+                            <constraint firstItem="J69-Zp-QtJ" firstAttribute="leading" secondItem="t9u-M9-Mw5" secondAttribute="leading" constant="-16" id="SAl-CM-3k6"/>
+                            <constraint firstItem="T5N-Zd-1DA" firstAttribute="bottom" secondItem="t9u-M9-Mw5" secondAttribute="bottom" constant="24" id="Z90-Ro-efA"/>
+                            <constraint firstItem="uvt-wp-CVc" firstAttribute="top" secondItem="tls-IF-Rjm" secondAttribute="bottom" constant="39" id="eZF-UW-47K"/>
+                            <constraint firstItem="uvt-wp-CVc" firstAttribute="leading" secondItem="T5N-Zd-1DA" secondAttribute="leading" constant="16" id="jir-Xb-C9t"/>
+                            <constraint firstItem="J69-Zp-QtJ" firstAttribute="leading" secondItem="T5N-Zd-1DA" secondAttribute="leading" id="jmR-0Q-E4m"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="trailing" secondItem="T5N-Zd-1DA" secondAttribute="trailing" constant="-15" id="opS-jg-P8a"/>
+                            <constraint firstItem="J69-Zp-QtJ" firstAttribute="trailing" secondItem="tls-IF-Rjm" secondAttribute="trailing" constant="24" id="z8c-hl-oBt"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="top" secondItem="uvt-wp-CVc" secondAttribute="bottom" constant="8" id="ztg-an-nYJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="J69-Zp-QtJ" id="A4T-Uy-BML"/>
+                        <outlet property="nameLabel" destination="tls-IF-Rjm" id="n9s-Q3-8i1"/>
+                        <outlet property="ratingLabel" destination="dxe-9i-OEW" id="JAi-v6-tuh"/>
+                        <outlet property="textView" destination="t9u-M9-Mw5" id="EO5-rP-jpq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMv-JH-Oo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183.969465648855" y="-39.436619718309863"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SVZ-Mi-o3L">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zYj-mF-Hwg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TrJ-T7-GhA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -141,8 +226,15 @@
     </scenes>
     <resources>
         <image name="arrow.down.heart.fill" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
