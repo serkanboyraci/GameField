@@ -13,10 +13,22 @@ protocol HomeViewModelDelegate {
     func viewDidLoad()
     func numberOfItemsInSection() -> Int
     func cellForItemAt(at indexPath: IndexPath) -> Game?
+    func didSelectItemAt(at indexPath: IndexPath)
     func updateSearchResults(text: String?)
+    func getGameID() -> Int?
 }
 
 class HomeViewModel: HomeViewModelDelegate {
+    //MARK: - CollectionViewDelegateMethods
+    func didSelectItemAt(at indexPath: IndexPath) {
+        self.id = filteredGameList[indexPath.row].id
+        view?.performSegue(identifier: "homepageToDetail")
+    }
+    
+    func getGameID() -> Int? {
+        self.id
+    }
+    
     func viewDidLoad() {
         <#code#>
     }
