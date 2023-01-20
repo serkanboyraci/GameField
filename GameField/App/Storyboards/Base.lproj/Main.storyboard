@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="1R2-rk-zab"/>
                     <connections>
                         <outlet property="favoriteListTableView" destination="0PS-My-g7v" id="Oqz-hM-rp5"/>
-                        <segue destination="qYt-UZ-Agi" kind="show" id="tSZ-hB-dH1"/>
+                        <segue destination="qYt-UZ-Agi" kind="show" identifier="favoriteListToDetail" id="tSZ-hB-dH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXh-yA-HKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
