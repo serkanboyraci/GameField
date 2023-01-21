@@ -8,16 +8,25 @@
 import UIKit
 
 class NoteListCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var gameNameLabel: UILabel!
+    @IBOutlet weak var noteTitleLabel: UILabel!
+    @IBOutlet weak var noteDateLabel: UILabel!
+    
+    //MARK: - Property
+    class var identifier: String {
+        return String(describing: self)
     }
     
+    class var nib: UINib {
+        return UINib(nibName: identifier, bundle: nil)
+    }
+    
+    //MARK: - Methods
+    func configureCell(with model: Note){
+        gameNameLabel.text = model.gameName
+        noteDateLabel.text = model.date
+        noteTitleLabel.text = model.text
+        selectionStyle = .none
+    }
 }
