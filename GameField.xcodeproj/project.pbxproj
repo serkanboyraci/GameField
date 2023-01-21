@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601B68BB297C695000773176 /* AddNoteButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601B68B9297C695000773176 /* AddNoteButtonView.xib */; };
+		601B68BD297C701000773176 /* AddNoteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601B68BC297C701000773176 /* AddNoteButtonView.swift */; };
 		60430731297B41DD00E50825 /* FavoriteListViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430730297B41DD00E50825 /* FavoriteListViewModule.swift */; };
 		60430733297B422D00E50825 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430732297B422D00E50825 /* FavoriteListViewController.swift */; };
 		60430736297B425D00E50825 /* FavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60430734297B425D00E50825 /* FavoriteListCell.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601B68B9297C695000773176 /* AddNoteButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteButtonView.xib; sourceTree = "<group>"; };
+		601B68BC297C701000773176 /* AddNoteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteButtonView.swift; sourceTree = "<group>"; };
 		60430730297B41DD00E50825 /* FavoriteListViewModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModule.swift; sourceTree = "<group>"; };
 		60430732297B422D00E50825 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
 		60430734297B425D00E50825 /* FavoriteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListCell.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				6043073A297BE45500E50825 /* NoteListViewModel.swift */,
 				6043073C297BE49700E50825 /* NoteListCell.swift */,
 				6043073D297BE49700E50825 /* NoteListCell.xib */,
+				601B68B9297C695000773176 /* AddNoteButtonView.xib */,
+				601B68BC297C701000773176 /* AddNoteButtonView.swift */,
 			);
 			path = NoteModule;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601B68BB297C695000773176 /* AddNoteButtonView.xib in Resources */,
 				60A6C4A22979542A0048680E /* LaunchScreen.storyboard in Resources */,
 				60A6C49F2979542A0048680E /* Assets.xcassets in Resources */,
 				60A6C49A297954290048680E /* Main.storyboard in Resources */,
@@ -351,6 +358,7 @@
 			files = (
 				60430733297B422D00E50825 /* FavoriteListViewController.swift in Sources */,
 				60A6C4B5297960210048680E /* HomeViewController.swift in Sources */,
+				601B68BD297C701000773176 /* AddNoteButtonView.swift in Sources */,
 				60A6C4CD297A008D0048680E /* SeguePerformable.swift in Sources */,
 				60A6C4D5297A8F860048680E /* CoreDataSucceessMessage.swift in Sources */,
 				60A6C4EA297ABD520048680E /* QueryItem.swift in Sources */,
@@ -539,6 +547,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,6 +576,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

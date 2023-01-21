@@ -15,7 +15,7 @@ protocol NavigationPresentable {
 extension NavigationPresentable where Self: UIViewController {
     func present(with viewControllerID: String) {
         let viewController = storyboard!.instantiateViewController(identifier: viewControllerID)
-        present(viewController, animated: true)
+        present(viewController, animated: true, completion: nil)
     }
     
     func dismiss() {

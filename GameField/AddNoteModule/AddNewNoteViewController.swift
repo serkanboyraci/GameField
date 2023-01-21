@@ -16,7 +16,9 @@ class AddNewNoteViewController: UIViewController {
 
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var gameNameTextField: UITextField!
+    
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteTextLabel: UITextView!
     @IBOutlet weak var saveButton: UIButton!
@@ -24,7 +26,7 @@ class AddNewNoteViewController: UIViewController {
     
     
     //MARK: - Property
-    private lazy var viewModel = AddNewNoteViewModel()
+    lazy var viewModel = AddNewNoteViewModel()
     class var identifier: String {
         return String(describing: self)
     }
@@ -77,7 +79,7 @@ extension AddNewNoteViewController: AddNewNoteVCDelegate {
     }
     
     func configureComponents(with note: Note) {
-        titleLabel.textColor = .systemOrange
+        titleLabel.textColor = .systemGreen
         titleLabel.text = "Edit the note"
         saveButton.removeFromSuperview()
         gameNameTextField.text = note.gameName
