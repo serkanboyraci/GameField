@@ -28,7 +28,7 @@ class NoteListViewController: UIViewController {
     //MARK: - Lifecycle
     override func loadView() {
         super.loadView()
-        let frame = CGRect(x: noteTableView.frame.width - 60,
+        let frame = CGRect(x: noteTableView.frame.width - 70,
                            y: noteTableView.frame.height,
                            width: 48, height: 48)
         let buttonView = AddNoteButtonView(frame: frame)
