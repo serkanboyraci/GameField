@@ -18,6 +18,7 @@ protocol NoteListVCDelegate: AnyObject, Alert, NavigationPresentable {
 class NoteListViewController: UITableViewController {
    
     @IBOutlet weak var noteTableView: UITableView!
+
     //MARK: - Property
     private lazy var viewModel = NoteListViewModel()
     class var identifier: String {
@@ -40,18 +41,9 @@ class NoteListViewController: UITableViewController {
         viewModel.view = self
         viewModel.viewDidLoad()
     }
-    
-    
-    @IBAction func addNoteButtonClicked(_ sender: Any) {
-    }
-    
-    
-    
-    
-    
 }
 
-extension NoteListViewController: UITableViewDataSource {
+extension NoteListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfRowsInSection()
     }
@@ -64,7 +56,7 @@ extension NoteListViewController: UITableViewDataSource {
     }
 }
 
-extension NoteListViewController: UITableViewDelegate {
+extension NoteListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRowAt(at: indexPath.row)
     }
@@ -74,6 +66,57 @@ extension NoteListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteButton = UIContextualAction(style: .destructive, title: "DELETE") {[weak self] action, view, bool in
+            self?.viewModel.trailingSwipeActionsConfigurationForRowAt(at: indexPath.row)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteButton])
+    }
+}
+
+//MARK: - NoteListVCDelegate
+extension NoteListVC: NoteListVCDelegate {
+    
+    func prepareTableView() {
+        navigationItem.title = LocalizableConstant.noteListTitle
+        noteTableView.delegate = self
+        noteTableView.dataSource = self
+        noteTableView.register(NoteListCell.nib, forCellReuseIdentifier: NoteListCell.identifier)
+        noteTableView.estimatedRowHeight = UITableView.automaticDimension
+    }
+    
+    func tableViewReloadData() {
+        noteTableView.reloadData()
+    }
+    
+    func preparePresent(note: Note?) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: AddNewNoteVC.identifier) as? AddNewNoteVC else { return }
+        vc.note = note
+        present(vc, animated: true)
+    }
+}
+
+extension NoteListVC: AddNoteButtonViewDelegate {
+    func pushViewController() {
+        present(with: AddNewNoteVC.identifier)
+    }
+}
+
+    
+}
+
+
+
+extension NoteListViewController: UITableViewDelegate {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(at: indexPath.row)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteButton = UIContextualAction(style: .destructive, title: "DELETE") {[weak self] action, view, bool in
             self?.viewModel.trailingSwipeActionsConfigurationForRowAt(at: indexPath.row)
