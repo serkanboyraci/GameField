@@ -35,10 +35,7 @@ final class AddNoteButton: UIView {
         }
     }
     
-    //MARK: - IBActions
-    @IBAction func addButtonClicked(_ sender: Any) {
-        delegate?.pushViewController()
-    }
+
     
 
 }
