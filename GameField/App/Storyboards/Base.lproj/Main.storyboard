@@ -44,7 +44,7 @@
         <!--Notes-->
         <scene sceneID="kcJ-jd-gbb">
             <objects>
-                <viewController id="iCM-Z5-Lxl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iCM-Z5-Lxl" customClass="NoteListViewController" customModule="GameField" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dhv-Ci-kt4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,18 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-gH-oFp">
+                                <rect key="frame" x="310" y="680" width="73" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNoteButtonClicked:" destination="iCM-Z5-Lxl" eventType="touchUpInside" id="Nc5-T6-80q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYP-dR-dTD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,14 +72,22 @@
                             <constraint firstItem="4uK-YW-vl5" firstAttribute="top" secondItem="hYP-dR-dTD" secondAttribute="top" id="6Z5-Jo-ibw"/>
                             <constraint firstItem="4uK-YW-vl5" firstAttribute="leading" secondItem="hYP-dR-dTD" secondAttribute="leading" id="8GA-ZE-52n"/>
                             <constraint firstItem="hYP-dR-dTD" firstAttribute="bottom" secondItem="4uK-YW-vl5" secondAttribute="bottom" id="DRS-3i-wtb"/>
+                            <constraint firstItem="sn7-gH-oFp" firstAttribute="leading" secondItem="hYP-dR-dTD" secondAttribute="leading" constant="310" id="FKX-3F-X4I"/>
+                            <constraint firstItem="hYP-dR-dTD" firstAttribute="trailing" secondItem="sn7-gH-oFp" secondAttribute="trailing" constant="10" id="ieB-Ti-GZe"/>
+                            <constraint firstItem="sn7-gH-oFp" firstAttribute="top" secondItem="hYP-dR-dTD" secondAttribute="top" constant="621" id="oov-tu-Eoj"/>
+                            <constraint firstItem="sn7-gH-oFp" firstAttribute="leading" secondItem="hYP-dR-dTD" secondAttribute="leading" constant="310" id="s3M-Yz-adS"/>
+                            <constraint firstItem="hYP-dR-dTD" firstAttribute="bottom" secondItem="sn7-gH-oFp" secondAttribute="bottom" constant="19" id="ufJ-LM-Hww"/>
                             <constraint firstItem="hYP-dR-dTD" firstAttribute="trailing" secondItem="4uK-YW-vl5" secondAttribute="trailing" id="z14-1t-shg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="1jf-OU-oFx"/>
+                    <connections>
+                        <outlet property="noteTableView" destination="4uK-YW-vl5" id="fs5-jK-PZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8q-U6-rsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189" y="1137"/>
+            <point key="canvasLocation" x="188.54961832061068" y="1136.6197183098593"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -179,16 +199,16 @@
                         <viewLayoutGuide key="safeArea" id="T5N-Zd-1DA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uvt-wp-CVc" firstAttribute="centerX" secondItem="t9u-M9-Mw5" secondAttribute="centerX" id="AAf-Cn-tso"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="t9u-M9-Mw5" secondAttribute="bottom" id="Asu-Pa-BJ5"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="bottom" secondItem="T5N-Zd-1DA" secondAttribute="bottom" id="AgX-iX-sup"/>
                             <constraint firstItem="uvt-wp-CVc" firstAttribute="top" secondItem="tls-IF-Rjm" secondAttribute="bottom" constant="39" id="CDY-Ix-7WS"/>
                             <constraint firstItem="J69-Zp-QtJ" firstAttribute="centerX" secondItem="uvt-wp-CVc" secondAttribute="centerX" id="Hvn-7R-ghC"/>
                             <constraint firstItem="tls-IF-Rjm" firstAttribute="leading" secondItem="uvt-wp-CVc" secondAttribute="leading" id="MlN-XM-19O"/>
                             <constraint firstItem="uvt-wp-CVc" firstAttribute="centerY" secondItem="udQ-Fl-4js" secondAttribute="centerY" id="MmO-fR-2gz"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="top" secondItem="uvt-wp-CVc" secondAttribute="bottom" constant="9" id="MsI-vO-bLK"/>
                             <constraint firstItem="tls-IF-Rjm" firstAttribute="leading" secondItem="udQ-Fl-4js" secondAttribute="leadingMargin" id="NE5-L6-aGq"/>
-                            <constraint firstItem="uvt-wp-CVc" firstAttribute="leading" secondItem="t9u-M9-Mw5" secondAttribute="leading" id="OJU-Zb-nUu"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="centerX" secondItem="uvt-wp-CVc" secondAttribute="centerX" id="UiY-be-slc"/>
                             <constraint firstItem="J69-Zp-QtJ" firstAttribute="leading" secondItem="T5N-Zd-1DA" secondAttribute="leading" id="UkV-ln-s8T"/>
-                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="top" secondItem="uvt-wp-CVc" secondAttribute="bottom" constant="9" id="WN1-7H-B12"/>
+                            <constraint firstItem="t9u-M9-Mw5" firstAttribute="leading" secondItem="uvt-wp-CVc" secondAttribute="leading" id="e5d-xB-P7b"/>
                             <constraint firstItem="tls-IF-Rjm" firstAttribute="top" secondItem="udQ-Fl-4js" secondAttribute="top" constant="329" id="prq-nU-64r"/>
                             <constraint firstItem="T5N-Zd-1DA" firstAttribute="trailing" secondItem="tls-IF-Rjm" secondAttribute="trailing" constant="24" id="qP6-NC-QB4"/>
                             <constraint firstItem="tls-IF-Rjm" firstAttribute="top" secondItem="J69-Zp-QtJ" secondAttribute="bottom" constant="18" id="rUI-uI-pzV"/>
@@ -278,6 +298,7 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -286,6 +307,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
