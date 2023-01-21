@@ -7,88 +7,96 @@
 
 import UIKit
 
-class NoteListViewController: UITableViewController {
+protocol NoteListVCDelegate: AnyObject, Alert, NavigationPresentable {
+    func prepareTableView()
+    func tableViewReloadData()
+    func preparePresent(note: Note?)
+}
 
+
+
+class NoteListViewController: UITableViewController {
+   
+    @IBOutlet weak var noteTableView: UITableView!
+    //MARK: - Property
+    private lazy var viewModel = NoteListViewModel()
+    class var identifier: String {
+        return String(describing: self)
+    }
     
-    
-    
-    
+    //MARK: - Lifecycle
+    override func loadView() {
+        super.loadView()
+        let frame = CGRect(x: noteTableView.frame.width / 2,
+                           y: noteTableView.frame.height + 25,
+                           width: 48, height: 48)
+        let buttonView = AddNoteButtonView(frame: frame)
+        buttonView.delegate = self
+        view.addSubview(buttonView)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        viewModel.view = self
+        viewModel.viewDidLoad()
     }
+}
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+extension NoteListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numberOfRowsInSection()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteListCell.identifier, for: indexPath) as? NoteListCell else { return .init() }
+        let note = viewModel.cellForRowAt(at: indexPath.row)
+        cell.configureCell(with: note)
         return cell
     }
-    */
+}
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+extension NoteListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(at: indexPath.row)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteButton = UIContextualAction(style: .destructive, title: "DELETE") {[weak self] action, view, bool in
+            self?.viewModel.trailingSwipeActionsConfigurationForRowAt(at: indexPath.row)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteButton])
     }
-    */
+}
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+//MARK: - NoteListVCDelegate
+extension NoteListViewController: NoteListVCDelegate {
+    
+    func prepareTableView() {
+        //navigationItem.title = LocalizableConstant.noteListTitle
+        noteTableView.delegate = self
+        noteTableView.dataSource = self
+        noteTableView.register(NoteListCell.nib, forCellReuseIdentifier: NoteListCell.identifier)
+        noteTableView.estimatedRowHeight = UITableView.automaticDimension
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableViewReloadData() {
+        noteTableView.reloadData()
     }
-    */
+    
+    func preparePresent(note: Note?) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: AddNewNoteVC.identifier) as? AddNewNoteVC else { return }
+        vc.note = note
+        present(vc, animated: true)
+    }
+}
 
+extension NoteListViewController: AddNoteButtonViewDelegate {
+    func pushViewController() {
+        present(with: AddNewNoteVC.identifier)
+    }
 }
