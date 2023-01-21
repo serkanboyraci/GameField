@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 class CoreDataFavoriteGameClient {
     //MARK: - Property
     static let shared: CoreDataFavoriteGameClient = CoreDataFavoriteGameClient()
@@ -41,9 +39,9 @@ class CoreDataFavoriteGameClient {
         coredata.getObject(by: id)
     }
     
-    func getAllFavoriteGame(comletion: @escaping(Result<[FavoriteGame],CoreDataCustomError>) -> Void){
+    func getAllFavoriteGame(completion: @escaping(Result<[FavoriteGame],CoreDataCustomError>) -> Void){
         coredata.getAllObjects(responseType: FavoriteGame.self) { result in
-            comletion(result)
+            completion(result)
         }
     }
 }

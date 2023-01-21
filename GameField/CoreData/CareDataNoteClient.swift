@@ -5,9 +5,10 @@
 //  Created by Ali serkan Boyracı  on 21.01.2023.
 //
 
+
 import Foundation
 
-class CoreDataNoteClient {
+final class CoreDataNoteClient {
     //MARK: - Property
     static let shared: CoreDataNoteClient = CoreDataNoteClient()
     private let coredata: CoreDataManager
@@ -40,9 +41,9 @@ class CoreDataNoteClient {
         coredata.getObject(by: id)
     }
     
-    func getAllNote(comletion: @escaping(Result<[Note],CoreDataCustomError>) -> Void){
+    func getAllNote(completion: @escaping(Result<[Note],CoreDataCustomError>) -> Void){
         coredata.getAllObjects(responseType: Note.self) { result in
-            comletion(result)
+            completion(result)
         }
     }
 }

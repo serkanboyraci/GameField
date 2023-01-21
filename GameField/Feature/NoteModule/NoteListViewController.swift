@@ -16,28 +16,32 @@ protocol NoteListVCDelegate: AnyObject, Alert, NavigationPresentable {
 class NoteListViewController: UIViewController {
     
     
+    
     @IBOutlet weak var noteTableView: UITableView!
     
+    //MARK: - Property
     lazy var viewModel = NoteListViewModel()
     class var identifier: String {
         return String(describing: self)
     }
     
-
+    //MARK: - Lifecycle
+    override func loadView() {
+        super.loadView()
+        let frame = CGRect(x: noteTableView.frame.width - 70,
+                           y: noteTableView.frame.height,
+                           width: 48, height: 48)
+        let buttonView = AddNoteButtonView(frame: frame)
+        buttonView.delegate = self
+        view.addSubview(buttonView)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.view = self
         viewModel.viewDidLoad()
     }
-    
-  //  @IBAction func addButtonClicked(_ sender: Any) {
-  //      present(with: AddNewNoteViewController.identifier)
-  //  }
-  //
-
-
 }
-
 
 extension NoteListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,3 +95,10 @@ extension NoteListViewController: NoteListVCDelegate {
         present(vc, animated: true)
     }
 }
+
+extension NoteListViewController: AddNoteButtonViewDelegate {
+    func pushViewController() {
+        present(with: AddNewNoteViewController.identifier)
+    }
+}
+
