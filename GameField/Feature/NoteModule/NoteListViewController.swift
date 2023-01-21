@@ -40,6 +40,15 @@ class NoteListViewController: UITableViewController {
         viewModel.view = self
         viewModel.viewDidLoad()
     }
+    
+    
+    @IBAction func addNoteButtonClicked(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
 }
 
 extension NoteListViewController: UITableViewDataSource {
