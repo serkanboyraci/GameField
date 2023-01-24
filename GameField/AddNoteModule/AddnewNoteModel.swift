@@ -14,8 +14,8 @@ struct NewNote {
     let title: String
     let text: String
     var date: String {
-        let date = Date()
-        let dateFormatter = DateFormatter()
+    let date = Date()
+    let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("dd.MM.yyyy")
         return dateFormatter.string(from: date)
     }

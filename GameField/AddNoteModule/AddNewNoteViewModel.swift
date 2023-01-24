@@ -42,7 +42,7 @@ class AddNewNoteViewModel: AddNewNoteViewModelDelegate {
     
     func editNote(note: Note) {
         print("edit note")
-        //TODO: core data update
+        //TODO: core data update and edit the columns
     }
     
     //MARK: - Private Methods

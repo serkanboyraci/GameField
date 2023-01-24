@@ -16,9 +16,7 @@ class AddNewNoteViewController: UIViewController {
 
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var gameNameTextField: UITextField!
-    
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteTextLabel: UITextView!
     @IBOutlet weak var saveButton: UIButton!
@@ -86,5 +84,4 @@ extension AddNewNoteViewController: AddNewNoteVCDelegate {
         noteTitleTextField.text = note.title
         noteTextLabel.text = note.text
     }
-    
 }
