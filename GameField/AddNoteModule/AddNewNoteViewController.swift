@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddNewNoteVCDelegate: AnyObject,Alert, NavigationPresentable {
+protocol AddNewNoteVCDelegate: AnyObject, Alert, NavigationPresentable {
     func configureComponents(with note: Note)
     func configureComponents()
 }
