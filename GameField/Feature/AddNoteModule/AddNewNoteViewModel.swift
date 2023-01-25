@@ -12,7 +12,7 @@ protocol AddNewNoteViewModelDelegate {
     
     func viewDidLoad(note: Note?)
     func saveNote(newNote: NewNote)
-    func editNote(note: Note)
+
 }
 
 class AddNewNoteViewModel: AddNewNoteViewModelDelegate {
@@ -40,9 +40,17 @@ class AddNewNoteViewModel: AddNewNoteViewModelDelegate {
         }
     }
     
-    func editNote(note: Note) {
-        print("edit note")
-        //TODO: core data update
+    func editNote(newNote: NewNote){
+        CoreDataNoteClient.shared.saveNote(newNote: newNote) { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.view?.showSuccessAlert(message: success.message)
+                self?.view?.dismiss()
+                CommunicationBetweenModules.shared.post(name: CommunicationMessage.noteListChanged.rawValue)
+            case .failure(let error):
+                self?.view?.showErrorAlert(message: error.message)
+            }
+        }
     }
     
     //MARK: - Private Methods

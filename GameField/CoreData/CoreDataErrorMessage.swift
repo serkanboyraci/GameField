@@ -18,13 +18,13 @@ extension CoreDataCustomError: Error {
     var message: String {
         switch self {
         case .loadError:
-            return "Failed to load"
+            return "Failed to Load"
         case .saveError:
-            return "Failed to save"
+            return "Failed to Save"
         case .updateError:
-            return "Failed to update"
+            return "Failed to Update"
         case .deleteError:
-            return "Failed to delete"
+            return "Failed to Delete"
         }
     }
 }

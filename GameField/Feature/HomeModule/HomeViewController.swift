@@ -33,10 +33,10 @@ final class HomeViewController: UIViewController {
         detailsVC.id = viewModel.getGameID()
     }
     @IBAction func menuButtonCicked(_ sender: Any) {
-  
+        //TODO
     }
     
-    
+
     
     //MARK: - Private Methods
     private func prepareCollectionView() {
@@ -51,7 +51,6 @@ final class HomeViewController: UIViewController {
     private func prepareSearchController(){
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
-        //search.searchBar.placeholder = LocalizableConstant.searchBarPlaceholder
         search.searchBar.barTintColor = .systemIndigo
         search.searchBar.searchTextField.textColor = .darkGray
         search.searchBar.searchTextField.tokenBackgroundColor = .red
@@ -102,8 +101,8 @@ extension HomeViewController: UICollectionViewDelegate {
 //MARK: - HomepageViewControllerDelegate
 extension HomeViewController: HomeViewControllerDelegate {
     func prepareComponents() {
-        view.backgroundColor = .systemGray3
-        navigationItem.title = "RAWG"
+        view.backgroundColor = .systemGray
+        navigationItem.title = "GameField"
         prepareCollectionView()
         prepareSearchController()
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddNewNoteVCDelegate: AnyObject,Alert, NavigationPresentable {
+protocol AddNewNoteVCDelegate: AnyObject, Alert, NavigationPresentable {
     func configureComponents(with note: Note)
     func configureComponents()
 }
@@ -16,9 +16,7 @@ class AddNewNoteViewController: UIViewController {
 
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var gameNameTextField: UITextField!
-    
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteTextLabel: UITextView!
     @IBOutlet weak var saveButton: UIButton!
@@ -53,6 +51,12 @@ class AddNewNoteViewController: UIViewController {
         
     @IBAction func editButtonClicked(_ sender: Any) {
         guard  checkTextFields() == true else { return }
+        
+        let newNote = NewNote(id: UUID().uuidString,
+                              gameName: gameNameTextField.text!,
+                              title: noteTitleTextField.text!,
+                              text: noteTextLabel.text!)
+        viewModel.saveNote(newNote: newNote)
     }
 
     private func checkTextFields() -> Bool {
@@ -86,5 +90,4 @@ extension AddNewNoteViewController: AddNewNoteVCDelegate {
         noteTitleTextField.text = note.title
         noteTextLabel.text = note.text
     }
-    
 }
