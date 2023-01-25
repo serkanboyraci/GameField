@@ -24,7 +24,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     override func prepareForReuse() {
-        backgroundImage.image = UIImage(systemName: "photo")
+        backgroundImage.image = nil
         ratingLabel.text = ""
         nameLabel.text = ""
     }

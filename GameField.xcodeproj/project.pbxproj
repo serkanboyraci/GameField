@@ -127,6 +127,15 @@
 			path = AddNoteModule;
 			sourceTree = "<group>";
 		};
+		605E01AB2980FF2A00080801 /* HomecollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */,
+				60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */,
+			);
+			path = HomecollectionView;
+			sourceTree = "<group>";
+		};
 		60A6C486297954290048680E = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +161,6 @@
 				60A6C4AB29795BCB0048680E /* Network */,
 				60A6C4AC29795BDC0048680E /* CoreData */,
 				60A6C4AD29795BE40048680E /* Feature */,
-				604852A9297C39050011BC31 /* AddNoteModule */,
 			);
 			path = GameField;
 			sourceTree = "<group>";
@@ -206,9 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				60A6C4AE29795C130048680E /* HomeModule */,
-				60A6C4B029795C460048680E /* DetailsModule */,
 				60A6C4AF29795C360048680E /* FavoriteListModule */,
+				60A6C4B029795C460048680E /* DetailsModule */,
 				60A6C4B129795C530048680E /* NoteModule */,
+				604852A9297C39050011BC31 /* AddNoteModule */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -216,10 +225,9 @@
 		60A6C4AE29795C130048680E /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
+				605E01AB2980FF2A00080801 /* HomecollectionView */,
 				60A6C4B8297964F40048680E /* HomeModel.swift */,
 				60A6C4B4297960210048680E /* HomeViewController.swift */,
-				60A6C4BA29796ED10048680E /* HomeCollectionViewCell.swift */,
-				60A6C4BB29796ED10048680E /* HomeCollectionViewCell.xib */,
 				60A6C4B6297960A70048680E /* HomeViewModel.swift */,
 			);
 			path = HomeModule;
@@ -229,9 +237,9 @@
 			isa = PBXGroup;
 			children = (
 				60430732297B422D00E50825 /* FavoriteListViewController.swift */,
+				60430730297B41DD00E50825 /* FavoriteListViewModule.swift */,
 				60430734297B425D00E50825 /* FavoriteListCell.swift */,
 				60430735297B425D00E50825 /* FavoriteListCell.xib */,
-				60430730297B41DD00E50825 /* FavoriteListViewModule.swift */,
 			);
 			path = FavoriteListModule;
 			sourceTree = "<group>";
@@ -239,9 +247,9 @@
 		60A6C4B029795C460048680E /* DetailsModule */ = {
 			isa = PBXGroup;
 			children = (
+				60A6C4CE297A8B840048680E /* DetailsModel.swift */,
 				60A6C4C82979EE620048680E /* DetailsViewController.swift */,
 				60A6C4CA2979FFF30048680E /* DetailsViewModel.swift */,
-				60A6C4CE297A8B840048680E /* DetailsModel.swift */,
 			);
 			path = DetailsModule;
 			sourceTree = "<group>";

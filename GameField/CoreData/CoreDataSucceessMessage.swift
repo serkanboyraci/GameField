@@ -17,11 +17,11 @@ extension CoreDataCustomSuccessMessage {
     var message: String {
         switch self {
         case .saveSuccess:
-            return "Successfully Added Favorites"
+            return "Successfully Added"
         case .updateSucces:
-            return "Successfully edited"
+            return "Successfully Edited"
         case .deleteSucces:
-            return "Successfully Deleted From Favorites"
+            return "Successfully Deleted"
         }
     }
 }

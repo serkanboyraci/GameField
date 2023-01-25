@@ -86,6 +86,4 @@ class FavoriteListViewModel: FavoriteListViewModelInterface {
                                                    name: name,
                                                    selector: #selector(getFavoriteGames))
     }
-    
-
 }
