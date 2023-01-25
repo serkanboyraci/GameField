@@ -51,6 +51,12 @@ class AddNewNoteViewController: UIViewController {
         
     @IBAction func editButtonClicked(_ sender: Any) {
         guard  checkTextFields() == true else { return }
+        
+        let newNote = NewNote(id: UUID().uuidString,
+                              gameName: gameNameTextField.text!,
+                              title: noteTitleTextField.text!,
+                              text: noteTextLabel.text!)
+        viewModel.saveNote(newNote: newNote)
     }
 
     private func checkTextFields() -> Bool {

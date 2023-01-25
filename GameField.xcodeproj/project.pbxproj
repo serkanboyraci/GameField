@@ -161,7 +161,6 @@
 				60A6C4AB29795BCB0048680E /* Network */,
 				60A6C4AC29795BDC0048680E /* CoreData */,
 				60A6C4AD29795BE40048680E /* Feature */,
-				604852A9297C39050011BC31 /* AddNoteModule */,
 			);
 			path = GameField;
 			sourceTree = "<group>";
@@ -215,9 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				60A6C4AE29795C130048680E /* HomeModule */,
-				60A6C4B029795C460048680E /* DetailsModule */,
 				60A6C4AF29795C360048680E /* FavoriteListModule */,
+				60A6C4B029795C460048680E /* DetailsModule */,
 				60A6C4B129795C530048680E /* NoteModule */,
+				604852A9297C39050011BC31 /* AddNoteModule */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
