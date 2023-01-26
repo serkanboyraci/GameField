@@ -23,7 +23,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QSV-kd-OGJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="0PS-My-g7v" firstAttribute="top" secondItem="QSV-kd-OGJ" secondAttribute="top" id="Kaf-Qc-VW4"/>
                             <constraint firstItem="QSV-kd-OGJ" firstAttribute="bottom" secondItem="0PS-My-g7v" secondAttribute="bottom" id="P1z-jc-hWp"/>
@@ -55,7 +55,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYP-dR-dTD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="4uK-YW-vl5" firstAttribute="top" secondItem="hYP-dR-dTD" secondAttribute="top" id="6Z5-Jo-ibw"/>
                             <constraint firstItem="4uK-YW-vl5" firstAttribute="leading" secondItem="hYP-dR-dTD" secondAttribute="leading" id="8GA-ZE-52n"/>
@@ -63,7 +63,9 @@
                             <constraint firstItem="hYP-dR-dTD" firstAttribute="trailing" secondItem="4uK-YW-vl5" secondAttribute="trailing" id="z14-1t-shg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="1jf-OU-oFx"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="1jf-OU-oFx">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="noteTableView" destination="4uK-YW-vl5" id="XDc-mK-08M"/>
                     </connections>
@@ -198,7 +200,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TFD-fu-c7a" secondAttribute="bottom" id="L47-Kf-FyA"/>
                             <constraint firstItem="TFD-fu-c7a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qu2-nY-B7i"/>
@@ -285,7 +287,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T5N-Zd-1DA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="t9u-M9-Mw5" firstAttribute="top" secondItem="uvt-wp-CVc" secondAttribute="bottom" constant="46" id="1tA-uo-596"/>
                             <constraint firstItem="t9u-M9-Mw5" firstAttribute="bottom" secondItem="T5N-Zd-1DA" secondAttribute="bottom" id="AgX-iX-sup"/>
@@ -324,7 +326,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TrJ-T7-GhA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="gWr-JM-IAW" kind="relationship" relationship="viewControllers" id="Oob-4Z-FI9"/>
@@ -341,6 +346,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWr-JM-IAW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="LX5-vd-dhr">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
                         <imageReference key="selectedImage" image="homekit" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -361,7 +367,9 @@
         <scene sceneID="6iC-ZO-1Jw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ggl-Rk-zeH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="arrow.down.heart.fill" catalog="system" id="3K2-9T-AsB"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="arrow.down.heart.fill" catalog="system" id="3K2-9T-AsB">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ezs-HJ-Rkf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -380,6 +388,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="vAZ-6p-ngM"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="systemBlueColor"/>
     <resources>
         <image name="arrow.down.heart.fill" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
