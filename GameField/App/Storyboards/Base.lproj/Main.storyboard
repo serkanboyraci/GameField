@@ -330,6 +330,11 @@
                         <color key="tintColor" systemColor="systemBlueColor"/>
                         <color key="barTintColor" systemColor="systemOrangeColor"/>
                         <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="systemMaterialLight">
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="selectionIndicatorTintColor" systemColor="systemBlueColor"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="gWr-JM-IAW" kind="relationship" relationship="viewControllers" id="Oob-4Z-FI9"/>
